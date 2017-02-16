@@ -11,10 +11,10 @@ RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y \
         libcurl4-openssl-dev `# required by passenger-config` \
         libpcre3-dev `# required by passenger-config` \
-        php5-fpm \
-        php5-memcached \
-        php5-mysql \
-        php5-xdebug
+        php-fpm \
+        php-memcached \
+        php-mysql \
+        php-xdebug
 RUN pip3 install Django Flask Flask-JSGlue Flask-Session SQLAlchemy virtualenv
 
 # install Passenger via gem, per https://www.phusionpassenger.com/library/install/standalone/install/oss/rubygems_norvm/,
